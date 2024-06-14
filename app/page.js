@@ -13,32 +13,20 @@ export default function Home() {
             <input type="search" id="#" className="rounded-md h-6" />
           </div>
 
-          <div className="flex ml-auto">
-            <div className="flex items-center mx-1">
-              <div className="w-6 h-6 bg-red-700 opacity-15"></div>
-              <div className="text-sm mx-1">Core</div>
-            </div>
-            <div className="flex items-center mx-1">
-              <div className="w-6 h-6 bg-red-700 opacity-15"></div>
-              <div className="text-sm mx-1">Descubrimiento</div>
-            </div>
-            <div className="flex items-center mx-1">
-              <div className="w-6 h-6 bg-red-700 opacity-15"></div>
-              <div className="text-sm mx-1">Webint</div>
-            </div>
-            <div className="flex items-center mx-1">
-              <div className="w-6 h-6 bg-red-700 opacity-15"></div>
-              <div className="text-sm mx-1">Registro de llamadas</div>
-            </div>
-            <div className="border border-black opacity-20 mx-2"></div>
-            <div className="flex items-center">
-              <div className="w-7 h-7 mx-2 bg-red-700 opacity-15 rounded-xl"></div>
-              <div className="w-7 h-7 mx-2 bg-red-700 opacity-15 rounded-xl"></div>
-              <div className="w-7 h-7 mx-2 bg-red-700 opacity-15 rounded-xl"></div>
-              <div className="w-7 h-7 mx-2 bg-red-700 opacity-15 rounded-xl"></div>
-              <div className="w-7 h-7 mx-2 bg-red-700 opacity-15 rounded-xl"></div>
-            </div>
+          <div className="flex ml-auto items-center">
+        {['Core', 'Descubrimiento', 'Webint', 'Registro de llamadas'].map((item, index) => (
+          <div key={index} className="flex items-center mx-1 cursor-pointer">
+            <div className="w-6 h-6 bg-red-700 opacity-10"></div>
+            <div className="text-sm mx-1">{item}</div>
           </div>
+        ))}
+        <div className="border border-black opacity-20 mx-2"></div>
+        <div className="flex items-center">
+          {[...Array(5)].map((_, index) => (
+            <div key={index} className="w-7 h-7 mx-2 bg-red-700 opacity-10 rounded-xl cursor-pointer"></div>
+          ))}
+        </div>
+      </div>
         </div>
       </div>
     </main>
