@@ -1,5 +1,5 @@
-import Navegation from "./components/navegation.js"
-import Sidebar from "./components/sidebar.js"
+import Navegation from './components/navegation.js'
+import Sidebar from './components/sidebar.js'
 
 export default function Home() {
   return (
